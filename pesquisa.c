@@ -204,13 +204,10 @@ void consulta3(HQ quad[200], int n)
 				}
 			}
 		}
+
+		for (i = 0; i < k; i++)
+			printf("- %s %d - %d/%d\n", aux[i].nome, aux[i].num, aux[i].mes, aux[i].ano);
 	}
-
-	for (i = 0; i < k; i++)
-		printf("- %s %d - %d/%d\n", aux[i].nome, aux[i].num, aux[i].mes, aux[i].ano);
-
-	
-
 }
 
 void consulta4(HQ quad[200], int n)
