@@ -183,7 +183,10 @@ void remove_hq(HQ quad[200])
         if(ok == 1)
             printf("Remocao realizada com sucesso!\n");
         else
+        {
             printf("Quadrinho nao encontrado!\n");
+            system("rm marvel-tmp.txt");
+        }
 
         system("mv marvel-tmp.txt marvel-data.txt");
 	}
@@ -228,6 +231,9 @@ void marca_lido(HQ quad[])
 					if (quad[i].lido == 1)
 					{
 						printf("Quadrinho já marcado!\n");
+						fclose(arq);
+        				fclose(novo);
+						system("rm marvel-tmp.txt");
 						ok = -1;
 					}
 					else ok = 1;
@@ -238,7 +244,13 @@ void marca_lido(HQ quad[])
 			}
 		}
 
-		if (ok == 0) printf("Quadrinho não encontrado!\n");
+		if (ok == 0) 
+		{
+			printf("Quadrinho não encontrado!\n");
+			fclose(arq);
+        	fclose(novo);
+        	system("rm marvel-tmp.txt");
+		}
 		else if (ok == 1)
 		{
 			quad[flag].lido = 1;
@@ -279,11 +291,10 @@ void marca_lido(HQ quad[])
 			}
 
 			printf("Alteração realizada com sucesso!");
+			fclose(arq);
+        	fclose(novo);
 			system("mv marvel-tmp.txt marvel-data.txt");
 		}	
-		
-		fclose(arq);
-        fclose(novo);
 	}
 
 	getchar();
