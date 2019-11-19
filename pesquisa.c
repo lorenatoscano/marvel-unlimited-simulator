@@ -1,7 +1,7 @@
+//Funções que retiram determinadas informações sem alterar o conteúdo do arquivo
+
 #include "altera.h"
 #include "pesquisa.h"
-
-//Funções que retiram determinadas informações sem alterar o conteúdo do arquivo
 
 void busca(HQ quad[200])
 {

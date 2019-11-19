@@ -1,3 +1,8 @@
+//Funções que alteram o arquivo e/ou o array
+
+#ifndef ALTERA_H
+#define ALTERA_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,9 +17,9 @@ typedef struct
 	char pers[50][100];
 } HQ;
 
-//Funções que alteram o arquivo e/ou o array
-
 void carrega_base(HQ*, int*);
 void adiciona(HQ*);
 void remove_hq(HQ*);
 void marca_lido(HQ*);
+
+#endif

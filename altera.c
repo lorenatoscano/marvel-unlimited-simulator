@@ -1,7 +1,7 @@
+//Funções que alteram o arquivo e/ou o array
+
 #include "altera.h"
 #include "pesquisa.h"
-
-//Funções que alteram o arquivo e/ou o array
 
 void carrega_base(HQ quad[200], int* n)
 {
