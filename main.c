@@ -4,8 +4,9 @@
 
 int main()
 {
-	system("clear");
+	system("clear"); // Limpa a tela
 
+	// Exibe mensagem de boas vindas
 	printf(" __   __  _______  ______    __   __  _______  ___     \n");
 	printf("|  |_|  ||   _   ||    _ |  |  | |  ||       ||   |    \n");
 	printf("|       ||  |_|  ||   | ||  |  |_|  ||    ___||   |    \n");
@@ -20,9 +21,9 @@ int main()
 	int qtd;
 	HQ* quadrinhos;
 
-	quadrinhos = calloc(200, sizeof(HQ));
+	quadrinhos = calloc(200, sizeof(HQ)); // Aloca dinamicamente a coleção de quadrinhos
 
-	while (option != 7)
+	while (option != 7) // Exibe o menu ao usuário até que ele saia
 	{
 
 		printf("MENU DE OPÇÕES:\n\n");
@@ -36,7 +37,7 @@ int main()
 
 		scanf("%d", &option);
 
-		switch (option)
+		switch (option) // Chama as funções de acordo com a escolha do usuário
 		{
 			case 1: carrega_base(quadrinhos, &qtd); break;
 			case 2: adiciona(quadrinhos); break;
